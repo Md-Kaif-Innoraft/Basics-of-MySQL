@@ -1,0 +1,57 @@
+WAQ to list all employee first name with salary greater than 50k.
+
+SELECT ed.employee_first_name, es.employee_salary FROM employee_salary_table AS es
+INNER JOIN employee_details_table AS ed
+ON es.employee_id = ed.employee_id
+WHERE employee_salary > '50000';
+
+================================================================================
+
+WAQ to list all employee last name with graduation percentile greater than 70%.
+
+SELECT employee_last_name, Graduation_percentile FROM employee_details_table
+WHERE Graduation_percentile > '70';
+
+
+================================================================================
+
+WAQ to list all employee code name with graduation percentile less than 70%.
+
+SELECT ec.employee_code_name, ed.Graduation_percentile FROM ((employee_code_table AS ec
+INNER JOIN employee_salary_table AS es ON ec.employee_code = es.employee_code)
+INNER JOIN employee_details_table AS ed ON es.employee_id = ed.employee_id)
+WHERE Graduation_percentile < '70';
+
+=========================================================================================
+
+WAQ to list all employee’s full name that are not of domain Java.
+
+SELECT ed.employee_first_name, ed.employee_last_name, ec.employee_domain FROM ((employee_code_table AS ec
+INNER JOIN employee_salary_table AS es ON ec.employee_code = es.employee_code)
+INNER JOIN employee_details_table AS ed ON es.employee_id = ed.employee_id)
+WHERE employee_domain <> 'JAVA';
+
+
+================================================================================================
+
+WAQ to list all employee_domain with sum of it's salary.
+
+SELECT employee_domain, SUM(employee_salary) FROM employee_code_table AS ec
+INNER JOIN employee_salary_table AS es ON ec.employee_code = es.employee_code
+GROUP BY employee_domain;
+
+
+=================================================================================================
+
+Write the above query again but dont include salaries which is less than 30k.
+
+SELECT employee_domain, SUM(employee_salary) FROM employee_code_table AS ec
+INNER JOIN employee_salary_table AS es ON ec.employee_code = es.employee_code
+WHERE employee_salary > '30k' GROUP BY employee_domain;
+
+
+===================================================================================================
+
+WAQ to list all employee id which has not been assigned employee code.
+
+SELECT employee_id FROM employee_salary_table WHERE employee_code is null;

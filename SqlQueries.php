@@ -1,5 +1,6 @@
 <?Php
 
+  // Include ConnectDb.php file.
   require 'ConnectDb.php';
 
   /**
@@ -8,7 +9,7 @@
   class SqlQueries {
 
     /**
-     * @var string $conn.
+     * @var object $conn.
      *  It will store database connection.
      */
     private $conn;

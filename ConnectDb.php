@@ -5,6 +5,10 @@
   use Dotenv\Dotenv;
   $dotenv = Dotenv::createImmutable(__DIR__);
   $dotenv->load();
+
+  /**
+   * Class ConnectDb for database connection.
+   */
   class ConnectDb {
 
     /**
@@ -49,6 +53,9 @@
 
     /**
      * Function to connect database.
+     *
+     * @return string.
+     *  Return connection.
      */
     public function connect () {
       try {

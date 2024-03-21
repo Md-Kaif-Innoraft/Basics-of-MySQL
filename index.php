@@ -1,6 +1,8 @@
 <?php
+
   // Including formvalidation file.
   require 'FormValidation.php';
+
 ?>
 
 <!doctype html>
@@ -17,39 +19,55 @@
   <body>
     <div class="container my-4 form-box">
     <!-- Form to take user input and insert into table. -->
-      <form method = "post" action="<?php echo htmlspecialchars($_SERVER["SELF_PHP"]); ?>">
+      <form onsubmit = "return validate()" method = "post" action="<?php echo htmlspecialchars($_SERVER["SELF_PHP"]); ?>">
         <h1>Enter Employee Details</h1>
+
         <div class="mb-3 my-4">
-          <label for="employee_first_name" class="form-label">Employee First Name</label>
-          <input type="text" class="form-control" id="employee_first_name" name = "employee_first_name" value = "<?php echo $_POST['employee_first_name']; ?>">
+          <label for="employee_first_name" class="form-label">Employee First Name <span class="error" id="empFnameErr">*<?php echo $formval->getEmpFnameErr(); ?></span></label>
+          <input type="text" required pattern="^[a-zA-Z\s]+$" class="form-control" id="employee_first_name" name = "employee_first_name" value = "<?php echo $_POST['employee_first_name']; ?>">
+          <div id="emailHelp" class="form-text">Example: John</div>
         </div>
+
         <div class="mb-3">
-          <label for="employee_last_name" class="form-label">Employee Last Name</label>
-          <input type="text" class="form-control" id="employee_last_name" name = "employee_last_name" value = "<?php echo $_POST['employee_last_name']; ?>">
+          <label for="employee_last_name" class="form-label">Employee Last Name <span class="error" id="empLnameErr">*<?php echo $formval->getEmpLnameErr(); ?></span></label>
+          <input type="text" required pattern="^[a-zA-Z\s]+$" class="form-control" id="employee_last_name" name = "employee_last_name" value = "<?php echo $_POST['employee_last_name']; ?>">
+          <div id="emailHelp" class="form-text">Example: Snow</div>
         </div>
+
         <div class="mb-3">
-          <label for="employee_id" class="form-label">Employee Id</label>
-          <input type="text" class="form-control" id="employee_id" name = "employee_id" value = "<?php echo $_POST['employee_id']; ?>">
+          <label for="employee_id" class="form-label">Employee Id <span class="error" id="empIdErr">*<?php echo $formval->getEmpIdErr(); ?></span></label>
+          <input type="text" required pattern="^RU[a-zA-Z0-9]{3,}$" class="form-control" id="employee_id" name = "employee_id" value = "<?php echo $_POST['employee_id']; ?>">
+          <div id="emailHelp" class="form-text">Example: RU122</div>
         </div>
+
         <div class="mb-3">
-          <label for="employee_code" class="form-label">Employee Code </label>
-          <input type="text" class="form-control" id="employee_code" name = "employee_code" value = "<?php echo $_POST['employee_code']; ?>">
+          <label for="employee_code" class="form-label">Employee Code <span class="error" id="empCodeErr">*<?php echo $formval->getEmpCodeErr(); ?></span></label>
+          <input type="text" required pattern ="^[a-zA-Z\s_]+$" class="form-control" id="employee_code" name = "employee_code" value = "<?php echo $_POST['employee_code']; ?>">
+          <div id="emailHelp" class="form-text">Example: su_john</div>
         </div>
+
         <div class="mb-3">
-          <label for="employee_code_name" class="form-label">Employee Code Name</label>
-          <input type="text" class="form-control" id="employee_code_name" name = "employee_code_name" value = "<?php echo $_POST['employee_code_name']; ?>">
+          <label for="employee_code_name" class="form-label">Employee Code Name <span class="error" id="empCodeNameErr">*<?php echo $formval->getEmpCodeNameErr(); ?></span></label>
+          <input type="text" required pattern ="^[a-zA-Z\s_]+$" class="form-control" id="employee_code_name" name = "employee_code_name" value = "<?php echo $_POST['employee_code_name']; ?>">
+          <div id="emailHelp" class="form-text">Example: ru_John</div>
         </div>
+
         <div class="mb-3">
-          <label for="employee_domain_name" class="form-label">Employee Domain Name</label>
-          <input type="text" class="form-control" id="employee_domain_name" name = "employee_domain_name" value = "<?php echo $_POST['employee_domain_name']; ?>">
+          <label for="employee_domain" class="form-label">Employee Domain Name <span class="error" id="empDomainErr">*<?php echo $formval->getEmpDomainErr(); ?></span></label>
+          <input type="text" required pattern="^[a-zA-Z\s]+$" class="form-control" id="employee_domain" name = "employee_domain" value = "<?php echo $_POST['employee_domain']; ?>">
+          <div id="emailHelp" class="form-text">Example: Java</div>
         </div>
+
         <div class="mb-3">
-          <label for="graduation_percentile" class="form-label">Employee Percentile</label>
-          <input type="text" class="form-control" id="graduation_percentile" name = "graduation_percentile" value = "<?php echo $_POST['graduation_percentile']; ?>">
+          <label for="graduation_percentile" class="form-label">Employee Percentile <span class="error" id="empGpErr">*<?php echo $formval->getEmpGpErr(); ?></span></label>
+          <input type="text" required pattern="\b(0*(?:[1-9][0-9]?|100))\b" class="form-control" id="graduation_percentile" name = "graduation_percentile" value = "<?php echo $_POST['graduation_percentile']; ?>">
+          <div id="emailHelp" class="form-text">Example: 60 (Don't enter %)</div>
         </div>
+
         <div class="mb-3">
-          <label for="employee_salary" class="form-label">Employee Salary</label>
-          <input type="text" class="form-control" id="employee_salary" name = "employee_salary" value = "<?php echo $_POST['employee_salary']; ?>">
+          <label for="employee_salary" class="form-label">Employee Salary <span class="error" id ="empSalaryErr">*<?php echo $formval->getEmpSalaryErr(); ?></span></label>
+          <input type="text" required pattern="\d+k" class="form-control" id="employee_salary" name = "employee_salary" value = "<?php echo $_POST['employee_salary']; ?>">
+          <div id="emailHelp" class="form-text">Example: 60k</div>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -63,7 +81,7 @@
           <h1 class = "text-center" >Employee Tables </h1>
         </div>
       <!-- Display employee_code_table Data.-->
-      <table class="table table-striped myTable" border = "1" >
+      <table class="table table-striped myTable table-hover" border = "1" >
       <thead>
         <tr>
           <th colspan="3">employee_code_table</th>
@@ -90,7 +108,7 @@
 
       <div class="box">
       <!-- Display employee_salary_table Data.-->
-      <table class="table table-striped myTable"  border = "1" >
+      <table class="table table-striped myTable" border = "1" >
       <thead>
         <tr>
           <th colspan="3">employee_salary_table</th>

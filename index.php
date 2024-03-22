@@ -25,39 +25,36 @@
 
     <div class="container">
       <div class="box">
-          <h1 class = "text-center" >Matches Table </h1>
-
-      <!-- Display employee_code_table Data.-->
-      <table class="table table-striped myTable table-hover" border = "1" >
-      <thead>
-        <tr class = "table-dark">
-          <th scope="col">Match Id</th>
-          <th scope="col">Venue</th>
-          <th scope="col">Date</th>
-          <th scope="col">Team1 Id</th>
-          <th scope="col">Team2 Id</th>
-          <th scope="col">Toss Won by</th>
-          <th scope="col">Match Won By</th>
-
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Loop though array to display data. -->
-        <?php foreach ($sql->displayData($query1) as $row) { ?>
-        <tr>
-          <td><?php echo $row['match_id']; ?> </td>
-          <td><?php echo $row['venue']; ?></td>
-          <td><?php echo $row['date']; ?></td>
-          <td><?php echo $row['team1_id']; ?> </td>
-          <td><?php echo $row['team2_id']; ?></td>
-          <td><?php echo $row['toss_won_by']; ?></td>
-          <td><?php echo $row['match_won_by']; ?></td>
-
-        </tr>
-      <?php } ?>
-      </tbody>
-      </table>
-      <hr>
+        <h1 class = "text-center" >Matches Table </h1>
+        <!-- Display employee_code_table Data.-->
+        <table class="table table-striped myTable table-hover" border = "1" >
+        <thead>
+          <tr class = "table-dark">
+            <th scope="col">Match Id</th>
+            <th scope="col">Venue</th>
+            <th scope="col">Date</th>
+            <th scope="col">Team1 Id</th>
+            <th scope="col">Team2 Id</th>
+            <th scope="col">Toss Won by</th>
+            <th scope="col">Match Won By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop though array to display data. -->
+          <?php foreach ($sql->displayData($query1) as $row) { ?>
+          <tr>
+            <td><?php echo $row['match_id']; ?> </td>
+            <td><?php echo $row['venue']; ?></td>
+            <td><?php echo $row['date']; ?></td>
+            <td><?php echo $row['team1_id']; ?> </td>
+            <td><?php echo $row['team2_id']; ?></td>
+            <td><?php echo $row['toss_won_by']; ?></td>
+            <td><?php echo $row['match_won_by']; ?></td>
+          </tr>
+        <?php } ?>
+        </tbody>
+        </table>
+        <hr>
       </div>
 
       <div class="box">
@@ -93,9 +90,8 @@
       Foreign key constraints ensure that only valid team IDs can be inserted into the Matches table, maintaining data integrity.</li>
       <br><hr>
       <h1 class= "text-center">Cons:</h1>
-      <li><strong>Join operations required:</strong><br>Join operations required: To retrieve complete match information
-      (including team names and captains), joins between the Matches and Teams tables are necessary, which may slightly impact query performance.
-      </li>
+      <li><strong>Join operations required:</strong><br>Join operations required: To retrieve complete match information(including team names and captains),
+      joins between the Matches and Teams tables are necessary, which may slightly impact query performance.</li>
       <li><strong> Additional complexity:</strong><br>Managing foreign key constraints and performing joins adds a layer of complexity to
       the database design and queries compared to denormalized structures.</li>
     </div>

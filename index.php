@@ -83,13 +83,13 @@
       <!-- Display employee_code_table Data.-->
       <table class="table table-striped myTable table-hover" border = "1" >
       <thead>
-        <tr>
+        <tr class="table-dark">
           <th colspan="3">employee_code_table</th>
         </tr>
         <tr>
           <th scope="col">employee_code</th>
           <th scope="col">employee_code_name</th>
-          <th scope="col">employee_code_domain</th>
+          <th scope="col">employee_domain</th>
         </tr>
       </thead>
       <tbody>
@@ -108,9 +108,9 @@
 
       <div class="box">
       <!-- Display employee_salary_table Data.-->
-      <table class="table table-striped myTable" border = "1" >
+      <table class="table table-striped myTable table-hover" border = "1" >
       <thead>
-        <tr>
+        <tr class="table-dark">
           <th colspan="3">employee_salary_table</th>
         </tr>
         <tr>
@@ -135,9 +135,9 @@
 
       <div class="box">
       <!-- Display employee_salary_table Data.-->
-      <table class="table table-striped myTable" border = "1" >
+      <table class="table table-striped myTable table-hover" border = "1" >
       <thead>
-        <tr>
+        <tr class="table-dark">
           <th colspan="4">employee_details_table</th>
         </tr>
         <tr>

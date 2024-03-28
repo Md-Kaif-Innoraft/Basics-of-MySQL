@@ -83,10 +83,9 @@
       <!-- Display employee_code_table Data.-->
       <table class="table table-striped myTable table-hover" border = "1" >
       <thead>
-        <tr class="table-dark">
-          <th colspan="3">employee_code_table</th>
+          <th colspan="3" class="text-center">employee_code_table</th>
         </tr>
-        <tr>
+        <tr class="table-dark">
           <th scope="col">employee_code</th>
           <th scope="col">employee_code_name</th>
           <th scope="col">employee_domain</th>
@@ -110,10 +109,10 @@
       <!-- Display employee_salary_table Data.-->
       <table class="table table-striped myTable table-hover" border = "1" >
       <thead>
-        <tr class="table-dark">
-          <th colspan="3">employee_salary_table</th>
-        </tr>
         <tr>
+          <th colspan="3" class="text-center">employee_salary_table</th>
+        </tr>
+        <tr class="table-dark">
           <th scope="col">employee_id</th>
           <th scope="col">employee_salary</th>
           <th scope="col">employee_code</th>
@@ -137,10 +136,10 @@
       <!-- Display employee_salary_table Data.-->
       <table class="table table-striped myTable table-hover" border = "1" >
       <thead>
-        <tr class="table-dark">
-          <th colspan="4">employee_details_table</th>
-        </tr>
         <tr>
+          <th colspan="4" class="text-center">employee_details_table</th>
+        </tr>
+        <tr class="table-dark">
           <th scope="col">employee_id</th>
           <th scope="col">employee_first_name</th>
           <th scope="col">employee_last_name</th>

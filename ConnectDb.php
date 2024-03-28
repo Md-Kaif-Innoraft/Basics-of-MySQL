@@ -2,7 +2,9 @@
 
   // Include Composer's autoloader.
   require './vendor/autoload.php';
+
   use Dotenv\Dotenv;
+
   $dotenv = Dotenv::createImmutable(__DIR__);
   $dotenv->load();
 
@@ -63,11 +65,9 @@
       // Set the PDO error mode to exception.
       $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
       }
-      catch(PDOException $e) {
+      catch (PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
       }
       return $this->conn;
     }
   }
-
-?>

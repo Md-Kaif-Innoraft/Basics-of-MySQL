@@ -31,7 +31,7 @@
      * @return array.
      *  Returns Associative array based on database table.
      */
-    public function displayData (string $sql): array {
+    public function displayData(string $sql): array {
       $statement = $this->conn->prepare($sql);
       $statement->execute();
       return $statement->fetchAll();
@@ -43,8 +43,8 @@
      * @param string $sql.
      *  It will take sql query to execute it.
      */
-    public function insertData (string $sql) {
-      try{
+    public function insertData(string $sql) {
+      try {
         $statement = $this->conn->prepare($sql);
         $statement->execute();
       }

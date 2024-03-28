@@ -58,7 +58,7 @@ function validateInput(inputId, errorId, regex, maxLength) {
  * @return boolean.
  *  Return true if all the validation are true otherwise false.
  */
-function validate() {
+function validate(){
   var empCodeValid = validateInput("employee_code", "empCodeErr", regexEmpCode, 20);
   var empFnameValid = validateInput("employee_first_name", "empFnameErr", regexName, 20);
   var empLnameValid = validateInput("employee_last_name", "empLnameErr", regexName, 20);
@@ -74,6 +74,6 @@ function validate() {
 }
 
 // Calling datatable function for desigining table.
-$(document).ready(function() {
+$(document).ready(function(){
     $('.myTable').DataTable();
 });

@@ -30,7 +30,7 @@ function validateName(inputId, errorId, maxLength, regex) {
   }
   // Check for input if pattern matches or not.
   else if (!regex.test(input)) {
-    error.innerHTML = "* Invalid Input javaS.";
+    error.innerHTML = "* Invalid Input.";
     return false;
   }
   // Check for input length.
@@ -59,7 +59,7 @@ function validatePassword(inputId, errorId, regex) {
   var error = document.getElementById(errorId);
   // Check for empty input.
   if (input == "") {
-    error.innerHTML = "* Password is required javaS.";
+    error.innerHTML = "* Password is required.";
     return false;
   }
   // Check for input if pattern matches or not.

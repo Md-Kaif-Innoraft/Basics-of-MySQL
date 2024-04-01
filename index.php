@@ -5,7 +5,7 @@ session_start();
 
 // Check for user is logged in or not.
 if ($_SESSION['isLogged'] == "TRUE") {
-  header("location: ./Assignment6/index.php");
+  header("location: ./Task/index.php");
 }
 
 // Including FormValidatin.php file.
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Set isLogged to TRUE.
         $_SESSION['isLogged'] = "TRUE";
         // Redirect to Assignment6/index.php.
-        header("location:./Assignment6/index.php");
+        header("location:./Task/index.php");
         exit;
       }
     }

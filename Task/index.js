@@ -102,8 +102,10 @@ function validateMarks(inputId, errorId) {
 
   var isValid = false;
 
+  // For Loop for iterating marks array and get marks and subjects.
   for (var i = 0; i < marksArray.length; i++) {
     var marks = marksArray[i].split("|");
+    // Checking if lenght of marks is more than 2 and atleast one should be number and string.
     if (marks.length !== 2 || marks[0].trim() === "" || marks[1].trim() === "" || (!isNaN(marks[0]) && !isNaN(marks[1]))) {
       error.innerHTML = "* Invalid Marks Entered.<br>";
       return false;
@@ -114,6 +116,7 @@ function validateMarks(inputId, errorId) {
     }
   }
 
+  // Check If the marks validation is not true then display error message.
   if (!isValid) {
     error.innerHTML = "* At least one mark should be a non-empty string representing a number.<br>";
     return false;

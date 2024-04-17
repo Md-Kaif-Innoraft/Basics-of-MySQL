@@ -10,19 +10,19 @@
   <div class="container">
     <div class="box">
       <form action="../index.php" method="">
-      <!--ring div starts here-->
-      <div class="ring">
-        <i style="--clr:#00ff0a;"></i>
-        <i style="--clr:#ff0057;"></i>
-        <i style="--clr:#fffd44;"></i>
-        <div class="login">
-          <h2>Password updated successfully.<br> Now You can log in to your account.</h2>
-          <div class="inputBx">
-            <input type="submit" value="Log in">
+        <!--ring div starts here-->
+        <div class="ring">
+          <i style="--clr:#00ff0a;"></i>
+          <i style="--clr:#ff0057;"></i>
+          <i style="--clr:#fffd44;"></i>
+          <div class="login">
+            <h2>Password updated successfully.<br> Now You can log in to your account.</h2>
+            <div class="inputBx">
+              <input type="submit" value="Log in">
+            </div>
           </div>
         </div>
-      </div>
-      <!--ring div ends here-->
+        <!--ring div ends here-->
       </form>
     </div>
   </div>

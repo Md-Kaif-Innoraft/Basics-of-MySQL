@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Class FormVAlidation for the validation of form inputs.
+ */
 class FormValidation{
 
   /**

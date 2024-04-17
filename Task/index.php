@@ -20,7 +20,7 @@ if ($_SESSION['isLogged'] != "TRUE") {
 <body>
   <div class="container">
     <div class="box">
-        <!-- form starts here -->
+      <!-- form starts here -->
       <h2 class="text-center">PHP Assignment 6</h2><br><br>
       <form onsubmit = "return validate()" method="post" action="FormPdf.php" enctype = "multipart/form-data">
         <label for="fName"><span class="error">* </span> First Name : </label> <br>

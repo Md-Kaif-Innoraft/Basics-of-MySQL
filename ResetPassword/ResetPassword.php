@@ -57,34 +57,34 @@
     <div class="box">
       <form onsubmit="return cPass()" action="./UpdatePassword.php" method="post">
         <!--ring div starts here-->
-      <div class="ring">
-        <i style="--clr:#00ff0a;"></i>
-        <i style="--clr:#ff0057;"></i>
-        <i style="--clr:#fffd44;"></i>
-        <div class="login">
-          <h2>Reset Password</h2>
-          <div class="inputBx">
-            <input type="hidden" id= "token" name = "token" value = <?php echo htmlspecialchars($token); ?> >
-          </div>
-          <div class="inputBx">
-            <input type="password" placeholder="New Password" id= "password" name = "password">
-            <span class="error" id="passErr"></span>
-          </div>
-          <div class="inputBx">
-            <input type="password" placeholder="Confirm Password" id= "confirmPass" name = "confirmPass">
-            <span class="error" id="confPassErr"></span>
-          </div>
-          <div class="inputBx">
-            <input type="submit" value="Reset Password">
-          </div>
-          <div class="error">
-          </div>
-          <div class="links">
-            <a href="../index.php">Login</a>
+        <div class="ring">
+          <i style="--clr:#00ff0a;"></i>
+          <i style="--clr:#ff0057;"></i>
+          <i style="--clr:#fffd44;"></i>
+          <div class="login">
+            <h2>Reset Password</h2>
+            <div class="inputBx">
+              <input type="hidden" id= "token" name = "token" value = <?php echo htmlspecialchars($token); ?> >
+            </div>
+            <div class="inputBx">
+              <input type="password" placeholder="New Password" id= "password" name = "password">
+              <span class="error" id="passErr"></span>
+            </div>
+            <div class="inputBx">
+              <input type="password" placeholder="Confirm Password" id= "confirmPass" name = "confirmPass">
+              <span class="error" id="confPassErr"></span>
+            </div>
+            <div class="inputBx">
+              <input type="submit" value="Reset Password">
+            </div>
+            <div class="error">
+            </div>
+            <div class="links">
+              <a href="../index.php">Login</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!--ring div ends here-->
+        <!--ring div ends here-->
       </form>
     </div>
   </div>

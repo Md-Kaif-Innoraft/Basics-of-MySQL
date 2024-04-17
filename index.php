@@ -77,33 +77,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="box">
       <form onsubmit="return login()" action="" method="post">
         <!--ring div starts here-->
-      <div class="ring">
-        <i style="--clr:#00ff0a;"></i>
-        <i style="--clr:#ff0057;"></i>
-        <i style="--clr:#fffd44;"></i>
-        <div class="login">
-          <h2>Login</h2>
-          <div class="inputBx">
-            <input type="email" required placeholder="Email" id= "email" name = "email" value = "<?php echo $_POST['email']; ?>">
-            <span class="error" id = "eErr"><?php echo $emailErr; ?></span>
-          </div>
-          <div class="inputBx">
-            <input type="password" required placeholder="Password" id= "password" name = "password">
-            <span class="error" id = "passErr"><?php echo $passErr; ?></span>
-          </div>
-          <div class="inputBx">
-            <input type="submit" value="Log in">
-          </div>
-          <div class="error">
-            <?php echo $validMSg; ?>
-          </div>
-          <div class="links">
-            <a href="./ResetPassword/ForgotPass.php">Forget Password</a>
-            <a href="./SignUp/SignUp.php">Signup</a>
+        <div class="ring">
+          <i style="--clr:#00ff0a;"></i>
+          <i style="--clr:#ff0057;"></i>
+          <i style="--clr:#fffd44;"></i>
+          <div class="login">
+            <h2>Login</h2>
+            <div class="inputBx">
+              <input type="email" required placeholder="Email" id= "email" name = "email" value = "<?php echo $_POST['email']; ?>">
+              <span class="error" id = "eErr"><?php echo $emailErr; ?></span>
+            </div>
+            <div class="inputBx">
+              <input type="password" required placeholder="Password" id= "password" name = "password">
+              <span class="error" id = "passErr"><?php echo $passErr; ?></span>
+            </div>
+            <div class="inputBx">
+              <input type="submit" value="Log in">
+            </div>
+            <div class="error">
+              <?php echo $validMSg; ?>
+            </div>
+            <div class="links">
+              <a href="./ResetPassword/ForgotPass.php">Forget Password</a>
+              <a href="./SignUp/SignUp.php">Signup</a>
+            </div>
           </div>
         </div>
-      </div>
-      <!--ring div ends here-->
+        <!--ring div ends here-->
       </form>
     </div>
   </div>

@@ -17,7 +17,7 @@ include './ForgotPassProcess.php';
 <body>
   <div class="container">
       <form onsubmit="return forPass()" action="" method="post">
-      <!--ring div starts here-->
+      <!--Ring div starts here.-->
       <div class="ring">
         <i style="--clr:#00ff0a;"></i>
         <i style="--clr:#ff0057;"></i>
@@ -39,7 +39,7 @@ include './ForgotPassProcess.php';
         </div>
         </div>
       </div>
-      <!--ring div ends here-->
+      <!--Ring div ends here.-->
       </form>
   </div>
 </body>

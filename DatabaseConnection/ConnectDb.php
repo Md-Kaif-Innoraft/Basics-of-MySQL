@@ -56,7 +56,7 @@ class ConnectDb {
    * @return object
    *  Return connection.
    */
-  public function connect () {
+  public function connect() {
     try {
     $this->conn = new PDO("mysql:host=$this->servername;dbname=$this->database", $this->username, $this->password);
     // Set the PDO error mode to exception.

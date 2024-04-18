@@ -18,7 +18,7 @@ include './ProcessSignup.php';
   <div class="container">
     <div class="box">
       <form onsubmit="return signup()" action="SignUp.php" method="post">
-        <!--ring div starts here-->
+        <!--Ring div starts here.-->
         <div class="ring">
           <i style="--clr:#00ff0a;"></i>
           <i style="--clr:#ff0057;"></i>
@@ -50,7 +50,7 @@ include './ProcessSignup.php';
             </div>
           </div>
         </div>
-        <!--ring div ends here-->
+        <!--Ring div ends here.-->
       </form>
     </div>
   </div>

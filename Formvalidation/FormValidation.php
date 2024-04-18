@@ -3,7 +3,7 @@
 /**
  * Class FormVAlidation for the validation of form inputs.
  */
-class FormValidation{
+class FormValidation {
 
   /**
    * Regular expression for validation.
@@ -42,7 +42,7 @@ class FormValidation{
       return "* Name must contins only alphabets.";
     }
     // Check for length of input.
-    if (strlen($name) < 1 || strlen($name) >= 20 ){
+    if (strlen($name) < 1 || strlen($name) >= 20 ) {
       return "* Name should be greater than 1 less than 20 characters.";
     }
     return "";
